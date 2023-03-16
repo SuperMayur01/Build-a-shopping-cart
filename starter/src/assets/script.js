@@ -129,8 +129,8 @@ const emptyCart = () => {
   - pay will return a positive number if money should be returned to customer
 */
 const pay = (amount) => {
-  balance = amount - cartTotal();
-  return balance;
+  const totalPaid = balance + amount;
+  return totalPaid - cartTotal();
 };
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
