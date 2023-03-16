@@ -13,7 +13,7 @@ const cherry = {
   price: 40,
   quantity: 1,
   productId: 147,
-  image: "../images/cherry.jpg",
+  image: "./images/cherry.jpg",
 };
 
 const orange = {
@@ -21,7 +21,7 @@ const orange = {
   price: 89,
   quantity: 1,
   productId: 639,
-  image: "../images/orange.jpg",
+  image: "./images/orange.jpg",
 };
 
 const strawberry = {
@@ -29,7 +29,7 @@ const strawberry = {
   price: 37,
   quantity: 1,
   productId: 259,
-  image: "../images/strawberry.jpg",
+  image: "./images/strawberry.jpg",
 };
 
 products.push(cherry, orange, strawberry);
@@ -129,8 +129,8 @@ const emptyCart = () => {
   - pay will return a positive number if money should be returned to customer
 */
 const pay = (amount) => {
-  const totalPaid = balance + amount;
-  return totalPaid - cartTotal();
+  balance += amount;
+  return balance - cartTotal();
 };
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
